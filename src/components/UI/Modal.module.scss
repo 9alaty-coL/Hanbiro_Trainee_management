@@ -1,0 +1,55 @@
+.backdrop{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #000;
+    opacity: 0.3;
+}
+
+.overlay{
+    position: fixed;
+    border-radius: 7px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    // transition: 1s ease;
+    animation: ease-to-top ease 0.4s forwards;
+    border: 1px solid #666;
+    box-shadow: #333 0px 0px 5px;
+    background-color: #eee;
+    z-index: 2;
+    &>.close1{
+        position: absolute;
+        width: 20px;
+        height: 3px;
+        border-radius: 5px;
+        background-color: #555;
+        right: 0px;
+        top: 0px;
+        transform: translate(-50%, 13px) rotate(-45deg) ;
+        cursor: pointer;
+    }
+    &>.close2{
+        position: absolute;
+        width: 20px;
+        height: 3px;
+        border-radius: 5px;
+        background-color: #555;
+        right: 0px;
+        top: 0px;
+        transform: translate(-50%, 13px) rotate(45deg) ;
+        cursor: pointer;
+    }
+}
+
+@keyframes ease-to-top {
+    0%{
+      top: 70%;
+      opacity: 0.5;
+    }
+    100%{
+        top: 45%;
+    }
+  }
