@@ -1,7 +1,7 @@
 import axios from "axios"
 
-// const SERVER_URL = "https://trainee-management.herokuapp.com"
-const SERVER_URL = "http://localhost:8000"
+const SERVER_URL = "https://trainee-management.herokuapp.com"
+// const SERVER_URL = "http://localhost:8000"
 
 export const getAccessToken = async (data) => {
 
