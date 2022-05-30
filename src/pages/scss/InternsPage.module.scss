@@ -1,0 +1,13 @@
+.main{
+    display: flex;
+}
+
+.page{
+    flex:1;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 200px;
+    &>h1{
+        text-align: center;
+    }
+}

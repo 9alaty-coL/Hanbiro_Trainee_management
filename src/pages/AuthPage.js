@@ -2,15 +2,16 @@ import { useContext, useRef , useCallback} from "react";
 import classes from './scss/AuthPage.module.scss'
 import { CircularProgress } from "@mui/material";
 import { useMutation } from "react-query";
-// import getAccessToken from "../api-calls/getAccessToken";
-// import AuthContext from "../context/AuthContext";
+import {getAccessToken} from "../api-calls/api-calls";
+import AuthContext from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+
+
 
 export default function Login() {
   const navigate = useNavigate();
   const username = useRef();
   const password = useRef();
-  //   const { isFetching, dispatch } = useContext(AuthContext);
   const {login} = useContext(AuthContext)
   const tokenMutation = useMutation(getAccessToken)
   const dispatchLogin = useCallback(token => {
@@ -24,25 +25,21 @@ export default function Login() {
       password: password.current.value,
       dispatch: dispatchLogin,
     })
-    // loginCall(
-    //   { username: username.current.value, password: password.current.value },
-    //   dispatch
-    // );
   };
 
   return (
-    <div className="login">
-      <div className="loginWrapper">
-        <div className="loginLeft">
-          <h3 className="loginLogo">HotMan</h3>
-          <span className="loginDesc">Manage hotel your way!</span>
+    <div className={classes.login}>
+      <div className={classes.loginWrapper}>
+        <div className={classes.loginLeft}>
+          <h3 className={classes.loginLogo}>Trainee Management</h3>
+          <span className={classes.loginDesc}>Manage intern your way!</span>
         </div>
-        <div className="loginRight">
-          <form className="loginBox" onSubmit={handleClick}>
+        <div className={classes.loginRight}>
+          <form className={classes.loginBox} onSubmit={handleClick}>
             <input
               placeholder="username"
               required
-              className="loginInput"
+              className={classes.loginInput}
               ref={username}
             />
             <input
@@ -50,12 +47,12 @@ export default function Login() {
               type="password"
               required
               minLength="5"
-              className="loginInput"
+              className={classes.loginInput}
               ref={password}
             />
             {tokenMutation.isError && <span style={{color: "red"}}>{tokenMutation?.error?.message}</span>}
             <button
-              className="loginButton"
+              className={classes.loginButton}
               type="submit"
               disabled={tokenMutation.isLoading}
             >
@@ -67,7 +64,7 @@ export default function Login() {
                 )
               }
             </button>
-            <span className="loginForgot">Forgot Password?</span>
+            <span className={classes.loginForgot}>Forgot Password?</span>
           </form>
         </div>
       </div>

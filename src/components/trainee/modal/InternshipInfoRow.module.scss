@@ -1,0 +1,21 @@
+.main{
+    display: flex;
+    margin: 14px 0px;
+    width: 100%;
+    align-items: center;
+    &>.title{
+        min-width: 120px;
+    }
+    &>.input{
+        flex:1;
+        margin-left: 1rem;
+        font-size: 1rem;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid black;
+        padding: 7px 1px;
+        &:focus{
+            outline: none;
+        }
+    }
+}

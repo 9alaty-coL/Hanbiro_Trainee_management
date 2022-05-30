@@ -1,0 +1,70 @@
+.main{
+    flex: 1;
+    padding-bottom: 100px;
+    .head{
+        position:fixed;
+        &:nth-child(1){
+            font-size: 4rem;
+            color: #444;
+            margin: 10px 60px;
+            cursor: pointer;
+        }
+    }
+    .body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &>.avatar{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &>img{
+                width: 130px;
+            }
+            &>span{
+                font-size: 1.6rem;
+                padding: 5px;
+                margin-bottom: 20px;
+                font-weight: bold;
+                color: darkblue;
+                text-shadow: #888 0px 0px 5px;
+            }
+        }
+        &>.info{
+            position: relative;
+            border: 1px solid black;
+            border-radius: 20px;
+            width: 60%;
+            padding: 30px 40px 10px 40px;
+            box-sizing: border-box;
+            &>span{
+                position: absolute;
+                background-color:white;
+                top: -15px;
+                left: 55px;
+                padding: 0px 20px ;
+
+            }
+            &>.form{
+                display: flex;
+                flex-direction: column;
+                padding: 20px 10px;
+                align-items: center;
+                &>*:not(.btnGroup){
+                    width: 100%;
+                    margin: 10px;
+                }
+                &>.btnGroup{
+                    width: 30%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 10px;
+                    &>*{
+                        padding-left: 40px;
+                        padding-right: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

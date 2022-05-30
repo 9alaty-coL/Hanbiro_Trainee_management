@@ -10,6 +10,11 @@ const OPTION_LIST = [
     link: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Home_Icon.svg/2048px-Home_Icon.svg.png",
   },
   {
+    name: "Danh sách thực tập",
+    path: "/interns",
+    link: "https://www.lawctopus.com/wp-content/uploads/2020/10/40716-200.png",
+  },
+  {
     name: "Đăng xuất",
     path: "/logout",
     link: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_logOut-ltr.svg/240px-OOjs_UI_icon_logOut-ltr.svg.png",

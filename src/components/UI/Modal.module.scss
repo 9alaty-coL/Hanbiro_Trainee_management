@@ -30,6 +30,7 @@
         top: 0px;
         transform: translate(-50%, 13px) rotate(-45deg) ;
         cursor: pointer;
+        z-index: 5;
     }
     &>.close2{
         position: absolute;
@@ -41,6 +42,8 @@
         top: 0px;
         transform: translate(-50%, 13px) rotate(45deg) ;
         cursor: pointer;
+        z-index: 5;
+
     }
 }
 
