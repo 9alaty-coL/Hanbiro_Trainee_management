@@ -14,11 +14,11 @@ const HomePage = () => {
                 <h2>Hanbiro internship challenge</h2>
             </div>
             <div className={classes.body}>
-                <Link to='https://drive.google.com/file/d/1IxZch7ELNttG0880RWh3yMcxtWswRl3q/view?usp=sharing' target='_blank' style={{textDecoration: "none"}}>
+                <a href='https://drive.google.com/file/d/1IxZch7ELNttG0880RWh3yMcxtWswRl3q/view?usp=sharing' target='_blank' style={{textDecoration: "none"}}>
                     <Button variant='contained' style={{width: '250px', display:'flex', justifyContent:'space-around', padding: '15px 20px'}}>
                         <FontAwesomeIcon fontSize={'30px'} icon={faUpRightFromSquare} /><span style={{fontSize: '15px'}}>Read my report</span>
                     </Button>
-                </Link>
+                </a>
             </div>
         </div>
     </div>
